@@ -18,6 +18,9 @@ except ImportError:
     # python 3 support as pickle module
     import pickle
 
+DYNATRACE_STATE_FILE = "/etc/stackstate-agent/conf.d/dynatrace_event.d/dynatrace_event_state.pickle"
+# DYNATRACE_STATE_FILE = "/Users/hruhek/PycharmProjects/StackState/stackstate-agent-integrations/dynatrace_event/dynatrace_event_state.pickle"
+
 
 class DynatraceEventCheck(AgentCheck):
     INSTANCE_TYPE = "dynatrace_event"
@@ -319,10 +322,6 @@ class EventLimitReachedException(Exception):
     Exception raised when maximum number of event reached
     """
     pass
-
-
-# DYNATRACE_STATE_FILE = "/etc/stackstate-agent/conf.d/dynatrace_event.d/dynatrace_event_state.pickle"
-DYNATRACE_STATE_FILE = "/Users/hruhek/PycharmProjects/StackState/stackstate-agent-integrations/dynatrace_event/dynatrace_event_state.pickle"
 
 
 class DynatraceEventState(object):
