@@ -10,7 +10,6 @@ from datetime import datetime, timedelta
 import time
 import json
 
-import logging
 import os
 
 try:
